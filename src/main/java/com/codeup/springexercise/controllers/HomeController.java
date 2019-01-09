@@ -36,7 +36,7 @@ public class HomeController {
             return "hello";
         }
 
-        @GetMapping("/hello/{fist}/{last}")
+        @GetMapping("/hello/{first}/{last}")
         public String hello(@PathVariable String first, @PathVariable String last, Model model) {
             String message = "Hello, " + first + " " + last + "!";
             model.addAttribute("message", message);
