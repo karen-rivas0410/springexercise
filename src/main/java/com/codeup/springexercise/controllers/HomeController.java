@@ -6,13 +6,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+@Controller
 public class HomeController {
 
-    @Controller
-    class HelloController {
-
-        @GetMapping(/"")
-        return "This is the landing page!"
+        @GetMapping("/home")
+        @ResponseBody
+        public String home() {
+            return "This is the landing page!";
+        }
 
         @GetMapping("/hello")
         @ResponseBody
@@ -41,5 +42,4 @@ public class HomeController {
             model.addAttribute("message", message);
             return message;
         }
-    }
 }
