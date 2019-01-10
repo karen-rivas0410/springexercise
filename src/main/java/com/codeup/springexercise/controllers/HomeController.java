@@ -9,37 +9,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class HomeController {
 
-        @GetMapping("/home")
-        @ResponseBody
+        @GetMapping("/home") //removing the @ResponseBody so that you can return the html page instead of the text//
         public String home() {
-            return "This is the landing page!";
+            return "home";  //this needs the name of the html so that spring can look for it in the resources/templates file//
         }
 
-        @GetMapping("/hello")
-        @ResponseBody
-        public String hello() {
-            return "Hello from Spring!";
-        }
-
-        ////SECOND OPTION////
-        @GetMapping("/hello2")
-        public String hello2(Model model) {
-            String message = "Hello to you!";
-            model.addAttribute("message", message);
-            return "hello";
-        }
-
-        @GetMapping("/hello/{name}")
-        public String hello(@PathVariable String name, Model model) {
-            String message = "Hello, " + name + "!";
-            model.addAttribute("message", message);
-            return "hello";
-        }
-
-        @GetMapping("/hello/{first}/{last}")
-        public String hello(@PathVariable String first, @PathVariable String last, Model model) {
-            String message = "Hello, " + first + " " + last + "!";
-            model.addAttribute("message", message);
-            return message;
-        }
 }
