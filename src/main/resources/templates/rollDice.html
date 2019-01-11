@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="partials :: head" />
+<body>
+
+<nav th:replace="partials :: navbar" />
+    <h1>Roll Dice!!!!</h1>
+    <hr />
+    <br />
+    <h2>The random number is: </h2>
+    <h2>Your guess is: </h2>
+    <h1>Your guess is correct!!!</h1>
+    <h1>Sorry!!!! Your wrong</h1>
+
+
+
+    <!--<ul>-->
+        <!--<li><a href="roll-dice/1">1</a></li>-->
+        <!--<li><a href="roll-dice/2">2</a></li>-->
+        <!--<li><a href="roll-dice/3">3</a></li>-->
+        <!--<li><a href="roll-dice/4">4</a></li>-->
+        <!--<li><a href="roll-dice/5">5</a></li>-->
+        <!--<li><a href="roll-dice/6">6</a></li>-->
+    <!--</ul>-->
+
+<div th:replace="partials :: scripts" />
+</body>
+</html>
