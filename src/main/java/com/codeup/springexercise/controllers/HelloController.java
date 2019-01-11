@@ -9,10 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class HelloController {
-    @GetMapping("/hello")
-    public String hello() {
-        return "hello";
-    }
+//    @GetMapping("/hello")
+//    public String hello() {
+//        return "hello";
+//    }
 
     ////SECOND OPTION////
     @GetMapping("/hello2")
@@ -36,10 +36,11 @@ public class HelloController {
 //        model.addAttribute("message", message);
 //        return message;
 //    }
-    @RequestMapping("/hello/{first}/{last}")
+    @GetMapping("/hello/{first}/{last}")
     public String hello(@PathVariable String first, @PathVariable String last, Model model) {
         String message = first + " " + last;
         model.addAttribute("message", message);
         return "hello";
     }
 }
+
