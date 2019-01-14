@@ -9,10 +9,10 @@
     <br />
     <h2>The random number is: <span th:text="${randomNum}" /></h2>
     <h2>Your guess is: <span th:text="${n}"/></h2>
-    <br/>
-    <h1>Your guess is correct!!!<span th:if="${randomNum == n}" /></h1>
-    <br/>
-    <h1>Sorry!!!! Your wrong <span th:if="${randomNum != n}" /></h1>
+    <br />
+    <h1><span th:if="${randomNum == n}" />Your guess is correct!!!</h1>
+    <br />
+    <h1><span th:if="${randomNum != n}" />Sorry!!!! Your wrong </h1>
 
 
 
