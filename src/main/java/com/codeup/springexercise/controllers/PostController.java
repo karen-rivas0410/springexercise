@@ -1,6 +1,7 @@
 package com.codeup.springexercise.controllers;
 
 import com.codeup.springexercise.models.Post;
+import com.codeup.springexercise.services.PostService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,6 +17,12 @@ public class PostController {
 
     private List<Post> posts; //post object is created to have an list of posts//
 
+    private final PostService postService;
+
+    public PostController(PostService postService) {
+        this.postService = postService;
+    }
+
 //    @GetMapping("/posts")
 //    @ResponseBody
 //    public String index(){
@@ -28,6 +35,7 @@ public class PostController {
         posts.add(new Post("New Post 1", "lorem impsum dolor set amit",1));
         posts.add(new Post("New Post 2", "lorem impsum dolor set amit", 2));
         posts.add(new Post("New Post 3", "lorem impsum dolor set amit", 3));
+        posts.add(new Post("New Post 4", "lorem impsum dolor set amit", 4));
         model.addAttribute("posts",posts);
         return "posts/index";
     }
