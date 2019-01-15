@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="partials :: head('Show Posts')" />
+
 <body>
+<div th:replace="partials :: header" />
+
+<nav th:replace="partials :: navbar" />
+
+<h1>Index</h1>
+
+<div th:replace="partials :: footer" />
+
+<div th:replace="partials :: scripts" />
 
 </body>
 </html>

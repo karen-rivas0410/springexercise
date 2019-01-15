@@ -14,13 +14,14 @@ import java.util.List;
 @Controller
 public class PostController {
 
-    private List<Post> posts; //post object is created to have an array of posts//
+    private List<Post> posts; //post object is created to have an list of posts//
 
-    @GetMapping("/posts")
-    @ResponseBody
-    public String index(){
-        return "posts index page";
-    }
+//    @GetMapping("/posts")
+//    @ResponseBody
+//    public String index(){
+//        return "posts index page";
+//    }
+
     @GetMapping("/posts")
     public String index(Model model) {
         posts = new ArrayList<>();
@@ -31,10 +32,18 @@ public class PostController {
         return "posts/index";
     }
 
+//    @GetMapping("/posts/{id}")
+//    @ResponseBody
+//    public String view(@PathVariable int id) {
+//        return "view an individual post with id: " + id;
+//    }
+
     @GetMapping("/posts/{id}")
-    @ResponseBody
-    public String view(@PathVariable long id) {
-        return "view an individual post with id: " + id;
+    public String view(@PathVariable int id, Model model) {
+        Post post = posts.get(id - 1);  //create a new object post//
+        model.addAttribute("post", post);
+        model.addAttribute("id", id);
+        return ("posts/show");
     }
 
     @GetMapping("/posts/create")

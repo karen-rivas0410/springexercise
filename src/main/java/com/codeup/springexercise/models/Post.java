@@ -3,13 +3,13 @@ package com.codeup.springexercise.models;
 public class Post {
     private String title;
     private String body;
-    private long id;
+    private int id;
 
     public Post () {
     }
 
 
-    public Post(String title, String body, long id) {
+    public Post(String title, String body, int id) {
         this.title = title;
         this.body = body;
         this.id = id;
@@ -31,11 +31,11 @@ public class Post {
         this.body = body;
     }
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
