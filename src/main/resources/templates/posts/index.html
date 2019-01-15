@@ -4,23 +4,24 @@
 <head th:replace="partials :: head('Posts')" />
 
 <body>
-<div th:replace="partials :: header" />
-
 <nav th:replace="partials :: navbar" />
+
+<div th:replace="partials :: header" />
 
 <div class="container">
 
     <h1>Here are the Posts: </h1>
 
-    <div class="card" th:each="post : ${posts}" style= "width: 18rem;">
-        <div class="card-body" th:text="${post.id}">
+    <div th:each="post : ${posts}" class="card" style= "width: 18rem;">
+        <div class="card-body">
             <h5 class="card-title"><a th:href="'posts/' + ${post.id}"><span th:text="${post.title}"></span></a></h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text"><span th:text="${post.body}"></span></p>
             <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
         </div>
     </div>
 
-<div th:replace="partials :: footer" />
+
+    <div th:replace="partials :: footer" />
 
 <div th:replace="partials :: scripts" />
 
