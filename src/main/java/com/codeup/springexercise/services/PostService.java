@@ -36,6 +36,8 @@ public class PostService {
         create(new Post("New Post 2", "lorem impsum dolor set amit", 2));
         create(new Post("New Post 3", "lorem impsum dolor set amit", 3));
         create(new Post("New Post 4", "lorem impsum dolor amit", 4));
+        create(new Post("New Post 4", "lorem impsum dolor amit", 5));
+
 
     }
 }

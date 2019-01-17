@@ -29,16 +29,16 @@ public class PostController {
 //        return "posts index page";
 //    }
 
-    @GetMapping("/posts")
-    public String index(Model model) {
-        posts = new ArrayList<>();
-        posts.add(new Post("New Post 1", "lorem impsum dolor set amit",1));
-        posts.add(new Post("New Post 2", "lorem impsum dolor set amit", 2));
-        posts.add(new Post("New Post 3", "lorem impsum dolor set amit", 3));
-        posts.add(new Post("New Post 4", "lorem impsum dolor set amit", 4));
-        model.addAttribute("posts",posts);
-        return "posts/index";
-    }
+//    @GetMapping("/posts")
+//    public String index(Model model) {
+//        posts = new ArrayList<>();
+//        posts.add(new Post("New Post 1", "lorem impsum dolor set amit",1));
+//        posts.add(new Post("New Post 2", "lorem impsum dolor set amit", 2));
+//        posts.add(new Post("New Post 3", "lorem impsum dolor set amit", 3));
+//        posts.add(new Post("New Post 4", "lorem impsum dolor set amit", 4));
+//        model.addAttribute("posts",posts);
+//        return "posts/index";
+//    }
 
 //    @GetMapping("/posts/{id}")
 //    @ResponseBody
